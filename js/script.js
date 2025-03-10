@@ -1,4 +1,13 @@
 // Ini file javascript
+
+function greetUser() {
+    let name = prompt("Greetings, may i know your name?","Anonymous");
+    let greetingsText = name ? `Hello ${name}, Welcome.` : "Hello Visitor, Welcome";
+    document.getElementById("greetings").innerText = greetingsText;
+}
+
+window.onload = greetUser;
+
 var myIndex = 0;
 carousel();
 
