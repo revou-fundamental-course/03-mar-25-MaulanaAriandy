@@ -15,6 +15,10 @@
     border-radius: 50%;
 }
 
+body {
+    /* background-image: radial-gradient(black, white) */
+}
+
 nav {
     display: flex;
 }
@@ -26,12 +30,20 @@ nav > a {
     color: black;
 }
 
+header > h1 {
+    
+}
+
+.fontsettings {
+    font-family: monospace;
+}
+
 .banner-container {
     margin-top: 16px;
     margin-bottom: 16px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 500px;
+    max-width: 750px;
 }
 
 .banner-img {
