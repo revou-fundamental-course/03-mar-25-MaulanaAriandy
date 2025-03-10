@@ -7,8 +7,7 @@
         <title>Portfolio Maulana A.</title>
 
         <!-- CSS -->
-         <link rel="stylesheet" href="css/style.css">
-
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <!-- Main Header -->
@@ -25,20 +24,31 @@
              </nav>
         </header>
 
+        <!-- Horizontal Ruler -->
         <hr/>
 
         <!-- Main Content -->
          <main>
             <!-- Home Content -->
             <section id="home">
+                <!-- Home Header -->
                 <header>
-                    <h1>Hi User, Welcome to my Portfolio</h1>
-                    <p>Here you can see my profile, achievement, and message me</p>
+                    <!-- Greetings -->
+                    <h1>Hi and welcome</h1>
+                    <p>Relax your mind, take a deep breath, sit properly and... Beware Jumpscare!</p>
                 </header>
 
                 <!-- Banner Autoslide -->
-                 <div class="banner-img"></div>
+                <div class="banner-container">
+                    <!-- Banner images -->
+                    <img class="banner-img" src="assets\img_chicago.jpg" alt="chicago">
+                    <img class="banner-img" src="assets\img_la.jpg" alt="los angeles">
+                    <img class="banner-img" src="assets\img_ny.jpg" alt="new york">
+                    <img class="banner-img" src="assets\download.jpeg" alt="jumpscare">
+                </div>
 
+                <!-- Script for carousel -->
+                <script src="js\script.js"></script>
             </section>
 
             <hr/>
@@ -75,14 +85,66 @@
 
                 <!-- Message Us Content -->
                 <div class="message-us-content">
-                    <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+                    <!-- Message display -->
+                    <div class="mdisplay">
+                        <p>(Others) Artour : Hello world</p>
+                        <p>(Australia) Ana : Nice to meet you</p>
+                    </div>
+                    
+                    <!-- Message form -->
+                    <form class="mform">
+                        <!-- Input nickname -->
+                        <div class="row">
+                            <div class="col-15">
+                                <label for="nname">Nickname</label>
+                            </div>
+                            <div class="col-85">
+                                <input type="text" id="fname" name="firstname" placeholder="Your nickname..">
+                            </div>
+                        </div>
+    
+                        <!-- Input Country -->
+                        <div class="row">
+                            <div class="col-15">
+                                <label for="country">Country</label>
+                            </div>
+                            <div class="col-85">
+                                <select id="country" name="countryname">
+                                    <option value="australia">Australia</option>
+                                    <option value="china">China</option>
+                                    <option value="indonesia" selected>Indonesia</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="malaysia">Malaysia</option>
+                                    <option value="singapore">Singapore</option>
+                                    <option value="usa">United States</option>
+                                    <option value="other">Others</option>                               
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Input message -->
+                        <div class="row">
+                            <div class="col-15">
+                                <label for="message">Message</label>
+                            </div>
+                            <div class="col-85">
+                                <textarea id="message" name="messagename" placeholder="Write your message here.." style="height: 120px;"></textarea>
+                            </div>
+                        </div>
+    
+                         <!-- Submit button -->
+                        <div class="row">
+                            <input type="button" value="Submit">
+                        </div>
+                    </form>
                 </div>
+
             </section>
          </main>
 
          <!-- Main Footer -->
           <footer>
-            <p>&copy; 2025 Portfolio Maul</p>
+            <p>&copy; 2025 Portfolio SCP096</p>
           </footer>
 
     </body>

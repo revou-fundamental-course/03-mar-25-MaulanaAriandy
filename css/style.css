@@ -26,9 +26,17 @@ nav > a {
     color: black;
 }
 
+.banner-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+}
+
 .banner-img {
-    border: 1px solid;
-    height: 500px;
+    width: 100%;
+    display: none;
 }
 
 .our-profile-content {
@@ -48,10 +56,88 @@ nav > a {
 
 .message-us-content {
     border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 600px;
 }
+
+.mdisplay {
+    background-color: aliceblue;
+    border: 1px solid;
+    height: 200px;
+}
+
+.mdisplay > p {
+    color: black;
+    margin: 15px;
+}
+
+.mform {
+    margin: 15px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=button] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.col-15 {
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+}
+
+.col-85 {
+    float: left;
+    width: 85%;
+    margin-top: 6px;
+}
+
+.row::after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.table-class {
+    border: 1px solid;
+    border-collapse: collapse;
+    height: 100px;
+}
+
+.table-class > tr, th, td {
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+    
 
 footer {
     text-align: center;
