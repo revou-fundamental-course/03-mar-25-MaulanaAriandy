@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scenery View</title>
 
-    <!-- JS -->
-     <script src="js/script.js" defer></script>
+    <!-- Javascript -->
+    <!-- <script src="js/script.js" defer></script> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -49,20 +49,17 @@
                 <!-- Banner images -->
 
                 <img class="banner-img" src="assets\adam-kool-ndN00KmbJ1c-unsplash.jpg"
-                    alt="https://unsplash.com/photos/landmark-photography-of-trees-near-rocky-mountain-under-blue-skies-daytime-ndN00KmbJ1c"/>
+                    alt="https://unsplash.com/photos/landmark-photography-of-trees-near-rocky-mountain-under-blue-skies-daytime-ndN00KmbJ1c" />
                 <img class="banner-img" src="assets\clark-tibbs-kwVdnDhT7OI-unsplash.jpg"
-                    alt="https://unsplash.com/photos/silhouette-photography-of-mountain-under-sky-kwVdnDhT7OI"/>
+                    alt="https://unsplash.com/photos/silhouette-photography-of-mountain-under-sky-kwVdnDhT7OI" />
                 <img class="banner-img" src="assets\niko-photos-tGTVxeOr_Rs-unsplash.jpg"
-                    alt="https://unsplash.com/photos/green-leaf-tree-under-blue-sky-tGTVxeOr_Rs"/>
+                    alt="https://unsplash.com/photos/green-leaf-tree-under-blue-sky-tGTVxeOr_Rs" />
                 <img class="banner-img" src="assets\thierry-meier-PKEPAeMBOIU-unsplash.jpg"
-                    alt="https://unsplash.com/photos/time-lapse-photography-of-body-of-water-PKEPAeMBOIU"/>
+                    alt="https://unsplash.com/photos/time-lapse-photography-of-body-of-water-PKEPAeMBOIU" />
                 <img class="banner-img" src="assets\tim-swaan-eOpewngf68w-unsplash.jpg"
-                    alt="https://unsplash.com/photos/blue-and-brown-steel-bridge-eOpewngf68w"/>
+                    alt="https://unsplash.com/photos/blue-and-brown-steel-bridge-eOpewngf68w" />
                 <!-- <img class="banner-img" src="assets\wes-hicks-6rNitHsIU3c-unsplash.jpg" alt="wes-hicks-6rNitHsIU3c-unsplash"/> -->
             </div>
-
-            <!-- Script for carousel -->
-            <script src="js\script.js"></script>
 
             <footer>
                 <p class="large-font">^ Carousel Autoslide ^</p>
@@ -99,62 +96,45 @@
         <!-- Message Us Content -->
         <section id="message-us">
             <header>
-                <h1>Message Us</h1>
+                <h1 class="larger-font">Leave a message below</h1>
             </header>
 
             <!-- Message Us Content -->
             <div class="message-us-content">
                 <!-- Message display -->
-                <div class="mdisplay">
-                    <p>(Others) Artour : Hello world</p>
-                    <p>(Australia) Ana : Nice to meet you</p>
-                </div>
-
-                <!-- Message form -->
-                <form class="mform">
-                    <!-- Input nickname -->
-                    <div class="row">
-                        <div class="col-15">
-                            <label for="nname">Nickname</label>
-                        </div>
-                        <div class="col-85">
-                            <input type="text" id="fname" name="firstname" placeholder="Your nickname..">
-                        </div>
+                <div class="display-form"></div>
+                <form name="message-form" onsubmit="return validateForm()">
+                    <div class="form-row">
+                        <label for="name-name">Name</label>
+                        <label id="specify" for="name-name">:</label>
+                        <input required type="text" id="name-id" name="name-name" placeholder="Your full name"/>
                     </div>
-
-                    <!-- Input Country -->
-                    <div class="row">
-                        <div class="col-15">
-                            <label for="country">Country</label>
-                        </div>
-                        <div class="col-85">
-                            <select id="country" name="countryname">
-                                <option value="australia">Australia</option>
-                                <option value="china">China</option>
-                                <option value="indonesia" selected>Indonesia</option>
-                                <option value="japan">Japan</option>
-                                <option value="malaysia">Malaysia</option>
-                                <option value="singapore">Singapore</option>
-                                <option value="usa">United States</option>
-                                <option value="other">Others</option>
-                            </select>
-                        </div>
+                    <div class="form-row">
+                        <label for="email-name">e-mail</label>
+                        <label id="specify" for="email-name">:</label>
+                        <input required type="text" id="email-id" name="email-name" placeholder="Your e-mail address"/>
                     </div>
-
-                    <!-- Input message -->
-                    <div class="row">
-                        <div class="col-15">
-                            <label for="message">Message</label>
-                        </div>
-                        <div class="col-85">
-                            <textarea id="message" name="messagename" placeholder="Write your message here.."
-                                style="height: 120px;"></textarea>
-                        </div>
+                    <div class="form-row">
+                        <label for="country-name">Country</label>
+                        <label id="specify" for="country-name">:</label>
+                        <select id="country-id" name="country-name">
+                            <option selected value="indonesia">Indonesia</option>
+                            <option value="australia">Australia</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
                     </div>
-
-                    <!-- Submit button -->
-                    <div class="row">
-                        <input type="button" value="Submit">
+                    <div class="form-row">
+                        <label for="message-name">Message</label>
+                        <label id="specify" for="message-name">:</label>
+                        <textarea id="message-id" name="message-name" placeholder="Your message here"></textarea>
+                    </div>
+                    <div class="submit-container">
+                        <button type="submit" value="submit">Submit</button>
+                        <p></p>
                     </div>
                 </form>
             </div>
