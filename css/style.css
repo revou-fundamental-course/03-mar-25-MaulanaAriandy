@@ -50,7 +50,6 @@ body {
 }
 
 
-
 .nav-links>a {
     text-decoration: none;
     color: black;
@@ -96,31 +95,42 @@ body {
 }
 /* end of our profile style */
 
-/* start of achievement style */
-.achievement-content {
-    border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
-}
-/* end of achievement style */
-
 /* start of message style */
-.message-us-content {
-    border: 1px solid;
-    background-color: #f2f2f2;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 .message-container {
     border: 1px solid black;
+    font-family: monospace;
+    font-size: large;
+    display: flex;
+}
+
+.form-container {
+    background-color: ghostwhite;
+    /* border: 1px solid black; */
     width: 50%;
     box-sizing: border-box;
     padding: 5px;
     resize: vertical;
-    font-family: monospace;
-    font-size: large;
+}
+
+.display-container {
+    background-color: ghostwhite;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+    resize: vertical;
+    
+}
+
+#header-message {
+    margin-top: 8px;
+    padding-top: 8px;
+    display: none;
+    justify-self: center;
+    text-decoration: underline;
+}
+
+#display-name > div {
+    margin-top: 0px;
 }
 
 .row {
@@ -148,6 +158,8 @@ body {
 #name-id, #email-id, #country-id, #message-id {
     width: 100%;
     box-sizing: border-box;
+    font-family: monospace;
+    font-size: medium;
 }
 
 #name-id {
@@ -170,9 +182,27 @@ body {
     width: 95%;
 }
 
+#display-name, #display-country, #display-message {
+    margin-right: 0px;
+    padding: 0px;
+}
+
 /* Responsiveness */
 @media only screen and (max-width: 640px) {
+    #display-name {
+        margin: 16px;
+    }
+
+    .message-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
     .form-container {
+        width: 100%;
+    }
+
+    .display-container {
         width: 100%;
     }
 

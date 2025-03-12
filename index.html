@@ -81,18 +81,6 @@
 
         </section>
 
-        <!-- Achievement -->
-        <section id="achievement">
-            <header>
-                <h1>Achievement</h1>
-            </header>
-
-            <!-- Achievemet Content -->
-            <div class="achievement-content">
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
-            </div>
-        </section>
-
         <!-- Message Us Content -->
         <section id="message-us">
             <header>
@@ -102,53 +90,59 @@
             <!-- Message Us Content -->
             <div class="message-container">
                 <!-- Message form -->
-                <form action="">
-                    <div class="row">
-                        <div class="label">
-                            <label for="name">Name:</label>
+                <div class="form-container">
+                    <form id="form-id" action="">
+                        <div class="row">
+                            <div class="label">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="name" id="name-id"/>
+                            </div>
                         </div>
-                        <div class="input">
-                            <input type="text" name="name" id="name-id" />
+                        <div class="row">
+                            <div class="label">
+                                <label for="email">Email:</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="email" id="email-id"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="label">
-                            <label for="email">Email:</label>
+                        <div class="row">
+                            <div class="label">
+                                <label for="country">Country:</label>
+                            </div>
+                            <div class="input">
+                                <select name="country" id="country-id"/>
+                                <option value="australia">Australia</option>
+                                <option value="indonesia" selected>Indonesia</option>
+                                <option value="malaysia">Malaysia</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="others" onselect="writeOther()">Others</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="input">
-                            <input type="text" name="email" id="email-id" />
+                        <div class="row">
+                            <div class="label">
+                                <label for="message">Pesan:</label>
+                            </div>
+                            <div class="input">
+                                <textarea name="message" id="message-id"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="label">
-                            <label for="country">Country:</label>
+                        <div class="row" id="submit-row">
+                            <div class="input" id="submit-box">
+                                <button type="button" id="submit-id" onclick="validateForm()">Submit</button>
+                            </div>
                         </div>
-                        <div class="input">
-                            <select name="country" id="country-id" />
-                            <option value="australia">Australia</option>
-                            <option value="indonesia" selected>Indonesia</option>
-                            <option value="malaysia">Malaysia</option>
-                            <option value="singapore">Singapore</option>
-                            <option value="others">Others</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="label">
-                            <label for="message">Pesan:</label>
-                        </div>
-                        <div class="input">
-                            <textarea name="message" id="message-id"></textarea>
-                        </div>
-                    </div>
-                    <div class="row" id="submit-row">
-                        <div class="input" id="submit-box">
-                            <button type="submit" id="submit-id">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <br />
                 <!-- Message display -->
-                <div class="display-form"></div>
+                <div class="display-container">
+                    <header id="header-message">Display Pesan</header>
+                    <div id="display-name"></div>
+                </div>
             </div>
 
         </section>
@@ -158,7 +152,7 @@
     <footer>
         <p>&copy; Image downloaded from Unsplash.com</p>
     </footer>
-    <script ></script>
+    <script></script>
 </body>
 
 </html>
