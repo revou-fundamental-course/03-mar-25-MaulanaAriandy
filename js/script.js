@@ -1,13 +1,4 @@
 // Ini file javascript
-
-function greetUser() {
-    let name = prompt("Greetings, may i know your name?","Anonymous");
-    let greetingsText = name ? `Hello ${name}, Welcome.` : "Hello Visitor, Welcome";
-    document.getElementById("greetings").innerText = greetingsText;
-}
-
-window.onload = greetUser;
-
 var myIndex = 0;
 carousel();
 
@@ -24,3 +15,11 @@ function carousel() {
     x[myIndex - 1].style.display = "block"
     setTimeout(carousel, 3000)
 }
+
+function greetUser() {
+    let name = prompt("Greetings, may i know your name?","Anonymous");
+    let greetingsText = name ? `Hello ${name}, Welcome.` : "Hello Visitor, Welcome";
+    document.getElementById("greetings").innerText = greetingsText;
+}
+
+window.onload = greetUser;
