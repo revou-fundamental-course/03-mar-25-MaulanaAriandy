@@ -1,25 +1,40 @@
 // Ini file javascript
-var myIndex = 0;
+// start of carousel code
+let carouselIndex = 0;
+carousel();
 
-function greetUser() {
-    let name = prompt("Greetings, may i know your name?","Anonymous");
-    let greetingsText = name ? `Hello ${name}, Welcome.` : "Hello Visitor, Welcome";
-    document.getElementById("greetings").innerText = greetingsText;
+// Index addition
+function nextPic() {
+    carouselIndex += 1;
     carousel();
 }
 
-window.onload = greetUser;
-
 function carousel() {
-    var i;
-    var x = document.getElementsByClassName("banner-img");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"
+    // create array of pic
+    const carouselArray = document.getElementsByClassName("banner-img");
+    
+    // Bigger index handler
+    if (carouselIndex >= carouselArray.length) {
+        carouselIndex = 0;
     }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1
+
+    // Loop through all carousel elements
+    for (let i = 0; i < carouselArray.length; i++) {
+        carouselArray[i].style.display = "none"
     }
-    x[myIndex - 1].style.display = "block"
-    setTimeout(carousel, 3000)
+
+    // Show first carrousel array
+    carouselArray[carouselIndex].style.display = "block"
 }
+
+// pic change interval 3 seconds
+setInterval(nextPic, 3000);
+// end of carrousel code
+
+function greetUser() {
+    let name = prompt("Greetings, may i know your name?","Anonymous");
+    let greetingsText = name ? `Hello ${name}, Welcome!` : "Hello Visitor, Welcome!";
+    document.getElementById("greetings").innerText = greetingsText;
+}
+
+window.onload = greetUser;
