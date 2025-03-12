@@ -9,7 +9,7 @@
     <title>Scenery View</title>
 
     <!-- Javascript -->
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" defMer></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -100,43 +100,55 @@
             </header>
 
             <!-- Message Us Content -->
-            <div class="message-us-content">
-                <!-- Message display -->
-                <div class="display-form"></div>
-                <form name="message-form" onsubmit="return validateForm()">
-                    <div class="form-row">
-                        <label for="name-name">Name</label>
-                        <label id="specify" for="name-name">:</label>
-                        <input required type="text" id="name-id" name="name-name" placeholder="Your full name"/>
+            <div class="form-container">
+                <!-- Message form -->
+                <form action="">
+                    <div class="row">
+                        <div class="label">
+                            <label for="name">Name:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="name" id="name-id" />
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="email-name">e-mail</label>
-                        <label id="specify" for="email-name">:</label>
-                        <input required type="text" id="email-id" name="email-name" placeholder="Your e-mail address"/>
+                    <div class="row">
+                        <div class="label">
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="email" id="email-id" />
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="country-name">Country</label>
-                        <label id="specify" for="country-name">:</label>
-                        <select id="country-id" name="country-name">
-                            <option selected value="indonesia">Indonesia</option>
+                    <div class="row">
+                        <div class="label">
+                            <label for="country">Country:</label>
+                        </div>
+                        <div class="input">
+                            <select name="country" id="country-id" />
                             <option value="australia">Australia</option>
-                            <option value="singapore">Singapore</option>
+                            <option value="indonesia" selected>Indonesia</option>
                             <option value="malaysia">Malaysia</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
+                            <option value="singapore">Singapore</option>
+                            <option value="others">Others</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-row">
-                        <label for="message-name">Message</label>
-                        <label id="specify" for="message-name">:</label>
-                        <textarea id="message-id" name="message-name" placeholder="Your message here"></textarea>
+                    <div class="row">
+                        <div class="label">
+                            <label for="message">Pesan:</label>
+                        </div>
+                        <div class="input">
+                            <textarea name="message" id="message-id"></textarea>
+                        </div>
                     </div>
-                    <div class="submit-container">
-                        <button type="submit" value="submit">Submit</button>
-                        <p></p>
+                    <div class="row" id="submit-row">
+                        <div class="input" id="submit-box">
+                            <button type="submit" id="submit-id">Submit</button>
+                        </div>
                     </div>
                 </form>
+                <!-- Message display -->
+                <div class="display-form"></div>
             </div>
 
         </section>
