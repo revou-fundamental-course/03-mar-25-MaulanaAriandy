@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scenery View</title>
 
+    <!-- Javascript -->
+    <script src="js/script.js" defer></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,9 +23,9 @@
 
         <!-- Navigation -->
         <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#message-us">Message Us</a>
+            <a class="larger-font" id="home-id" href="#home">Home</a>
+            <a class="larger-font" id="about-id" href="#about">About</a>
+            <a class="larger-font" id="messageus-id" href="#message-us">Message Us</a>
         </nav>
     </header>
 
@@ -187,10 +190,11 @@
 
     <!-- Main Footer -->
     <footer>
-        <p>&star; The End &star;</p>
+        <p class="larger-font">&star; The End &star;</p>
     </footer>
-
-    <script src="js/script.js"></script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&bigtriangleup;
+        <div>Top</div>
+    </button>
 </body>
 
 </html>
