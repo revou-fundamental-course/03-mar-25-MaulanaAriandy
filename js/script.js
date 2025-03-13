@@ -9,14 +9,22 @@ function nextPic() {
     carousel();
 }
 
+function prevPic() {
+    carouselIndex += -1;
+    carousel();
+}
+
 // view picture one by one
 function carousel() {
     // create array of pic
     const carouselArray = document.getElementsByClassName("banner-img");
 
-    // Bigger index handler
+    // Lower or Bigger index handler
     if (carouselIndex >= carouselArray.length) {
         carouselIndex = 0;
+    }
+    if (carouselIndex < 0) {
+        carouselIndex = carouselArray.length - 1;
     }
 
     // Loop through all carousel elements
@@ -43,6 +51,24 @@ function greetUser() {
 window.onload = greetUser;
 //end of welcome speech code
 
+let clock;
+
+function checkTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    h = addZero(h);
+    m = addZero(m);
+    clock = h + ":" + m;
+}
+
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
 //start of form validation code
 function validateForm() {
     // Get value from input
@@ -61,27 +87,25 @@ function validateForm() {
             return 0;
         } else
 
-        if (emailId.value == "") {
-            alert("Email must not be empty");
-            return 0;
-        } else
+            if (emailId.value == "") {
+                alert("Email must not be empty");
+                return 0;
+            } else
 
-        if (messageId.value == "") {
-            alert("Message must not be empty");
-            return 0;
-        } else {
-            document.getElementById("header-message").style.display = "block";
-            const node = document.createElement("p");
-            const textnode = document.createTextNode(nameId.value + " : " + messageId.value + " (" + countryId.value + ")");
-            node.style.textTransform = "capitalize";
-            node.appendChild(textnode);
-            document.getElementById("display-name").appendChild(node);
-            // document.getElementById("display-name").innerText = nameId.value + " : " + messageId.value + " (" + countryId.value + ")";
-        }
+                if (messageId.value == "") {
+                    alert("Message must not be empty");
+                    return 0;
+                } else {
+                    document.getElementById("header-message").style.display = "block";
+
+                    const node = document.createElement("p");
+                    checkTime();
+                    const textnode = document.createTextNode(nameId.value + " (" + countryId.value + ", " + clock + ")" + " : " + messageId.value);
+                    node.style.textTransform = "capitalize";
+                    node.appendChild(textnode);
+                    document.getElementById("display-name").appendChild(node);
+                    // document.getElementById("display-name").innerText = nameId.value + " : " + messageId.value + " (" + countryId.value + ")";
+                }
     }
     document.getElementById("form-id").reset()
-}
-
-function writeOther() {
-
 }

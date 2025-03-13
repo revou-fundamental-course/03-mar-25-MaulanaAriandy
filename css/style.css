@@ -52,6 +52,7 @@ body {
 
 .nav-links>a {
     text-decoration: none;
+    background-color: wheat;
     color: black;
     border: 1px solid black;
     padding: 5px;
@@ -84,14 +85,41 @@ body {
     width: 100%;
     display: none;
 }
+
+#home > footer {
+    display: flex;
+    justify-self: center;
+}
+
+#home > footer > button {
+    background-color: wheat;
+    border: 1px solid black;
+    margin: 4px;
+    padding: 4px;
+}
+
+@media only screen and (max-width: 640px) {
+    #home > footer {
+        display: flex;
+        justify-self: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    #home > footer > button {
+        width: 50% ;
+    }
+}
 /* end of banner style */
 
 /* start of our profile style */
 .our-profile-content {
+    background-color: honeydew;
+    opacity: 80%;
     border: 1px solid;
-    height: 500px;
+    padding: 15px;
     align-content: center;
-    text-align: center;
+    text-align: justify;
+    display: table;
 }
 /* end of our profile style */
 
@@ -110,6 +138,7 @@ body {
     box-sizing: border-box;
     padding: 5px;
     resize: vertical;
+    align-content: center;
 }
 
 .display-container {
@@ -148,15 +177,25 @@ body {
 }
 
 .label {
-    width: 25%;
+    width: 18%;
 }
 
 .input {
-    width: 75%;
+    width: 82%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .label {
+        width: 25%;
+    }
+    
+    .input {
+        width: 75%;
+    }
 }
 
 #name-id, #email-id, #country-id, #message-id {
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     font-family: monospace;
     font-size: medium;
@@ -182,9 +221,12 @@ body {
     width: 95%;
 }
 
-#display-name, #display-country, #display-message {
+#display-name {
+    word-wrap: normal;
     margin-right: 0px;
     padding: 0px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* Responsiveness */
